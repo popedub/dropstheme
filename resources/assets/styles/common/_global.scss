@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400&display=swap");
+
+body {
+  color: $negro;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+  @include media-breakpoint-up(xxl) {
+    max-width: 1380px;
+  }
+}
+
+h1 {
+  @include font-size($f1);
+
+  line-height: 0.85;
+}
+
+h3 {
+  @include font-size($f3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Archivo Black", Arial, Helvetica, sans-serif;
+}
+
+p {
+  @include media-breakpoint-up(lg) {
+    @include font-size($f4);
+  }
+}
+
+.marron {
+  color: $marron;
+}
+
+.f3 {
+  font-size: $f3;
+}
+
+.f2 {
+  font-size: $f4;
+
+  p {
+    font-size: $f4;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f2;
+
+    p {
+      font-size: $f2;
+      line-height: 1.2;
+    }
+  }
+}
+
+.f4 {
+  font-size: $f4;
+  line-height: 1.2;
+
+  p {
+    font-size: $f4;
+  }
+}
+
+.f4-lg {
+  @include media-breakpoint-up(lg) {
+    font-size: $f4;
+    line-height: 1.2;
+
+    p {
+      font-size: $f4;
+    }
+  }
+}
+
+.f-stand {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.f-oswald {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  p {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+}
+
+.gris {
+  background-color: $gris;
+}
+
+body.single {
+  .gris {
+    padding-top: $espacio/2;
+    padding-bottom: $espacio;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.blanco {
+  color: white !important;
+}
+
+.brown {
+  background-color: $marron;
+  color: $azul;
+}
+
+.social-share {
+  position: absolute;
+  width: 200px;
+  bottom: 15px;
+}
+
+.text-small {
+  font-size: 0.85rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: inherit;
+  }
+}

@@ -1,0 +1,257 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+//GIVE
+.give_warning {
+  display: none;
+}
+
+.give-total-wrap {
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 75px;
+  }
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before {
+  border-left: 1px solid $negro;
+  border-radius: 2.5rem;
+  border-top-right-radius: initial;
+  border-bottom-right-radius: initial;
+  color: $negro;
+  font-weight: 300;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f2;
+    height: 5rem;
+    padding: 15px 30px;
+    line-height: 1.2;
+  }
+}
+
+form[id*=give-form] .give-donation-amount #give-amount {
+  border: 1px solid $negro;
+  border-left: none;
+  border-radius: 2.5rem;
+  border-bottom-left-radius: initial;
+  border-top-left-radius: initial;
+  background-color: transparent;
+  text-align: right;
+  color: $negro;
+  font-weight: 300;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f2;
+    height: 5rem;
+    padding: 15px 30px;
+    min-width: 225px;
+  }
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol {
+  border-top: 1px solid $negro;
+  border-bottom: 1px solid $negro;
+}
+//ul de las opciones de donacion
+#give-donation-level-button-wrap {
+  li {
+    button {
+      @extend .btn-outline-negro ;
+      @extend .btn ;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    margin-bottom: $espacio;
+
+    li {
+      width: 25%;
+
+      button {
+        font-size: $f2;
+        padding: 15px 30px;
+        border-radius: 3rem;
+      }
+    }
+  }
+}
+
+body.template-about {
+  #give-donation-level-button-wrap {
+    li {
+      button {
+        @extend .btn-outline-azul ;
+        @extend .btn ;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      margin-bottom: $espacio;
+
+      li {
+        width: 25%;
+
+        button {
+          font-size: $f2;
+          padding: 15px 30px;
+          border-radius: 3rem;
+        }
+      }
+    }
+  }
+
+  form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before {
+    border-left: 1px solid $azul;
+    border-radius: 2.5rem;
+    border-top-right-radius: initial;
+    border-bottom-right-radius: initial;
+    color: $azul;
+    font-weight: 300;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $f2;
+      height: 5rem;
+      padding: 15px 30px;
+      line-height: 1.2;
+    }
+  }
+
+  form[id*=give-form] .give-donation-amount #give-amount {
+    border: 1px solid $azul;
+    border-left: none;
+    border-radius: 2.5rem;
+    border-bottom-left-radius: initial;
+    border-top-left-radius: initial;
+    background-color: transparent;
+    text-align: right;
+    color: $azul;
+    font-weight: 300;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $f2;
+      height: 5rem;
+      padding: 15px 30px;
+      min-width: 225px;
+    }
+  }
+
+  form[id*=give-form] .give-donation-amount .give-currency-symbol {
+    border-top: 1px solid $azul;
+    border-bottom: 1px solid $azul;
+    background-color: $marron;
+  }
+}
+
+[id*=give-form] .give-recurring-donors-choice {
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $espacio*2;
+  }
+}
+
+.give-form-title {
+  text-transform: uppercase;
+}
+
+.give-btn.give-btn-modal {
+  @extend .btn ;
+  @extend .btn-primary ;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f4;
+    padding: 15px 30px;
+    border-radius: 3rem;
+  }
+}
+
+[id*="give-form"] .give-recurring-donors-choice + .give-btn,
+[id*="give-form"] .give-recurring-admin-choice + .give-btn {
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+
+form[id*=give-form] .give-donation-amount {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+//modal
+.give-modal .mfp-content {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  @include media-breakpoint-up(lg) {
+    width: 700px;
+  }
+}
+
+[id*="give-form"].give-recurring-form fieldset {
+  legend {
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+#give-payment-mode-select legend {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form[id*=give-form] #give-gateway-radio-list {
+  margin-bottom: 30px;
+}
+
+[id*=give-form].give-fl-form .give-fl-wrap {
+  width: 100%;
+}
+
+.give-donation-submit {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
+  background-color: transparent;
+  color: $negro;
+  padding: 0 80px 0 20px;
+  height: 50px;
+  line-height: 50px;
+}
+
+form[id*=give-form] #give-final-total-wrap .give-final-total-amount {
+  background-color: transparent;
+  color: $negro;
+  padding: 0 22px;
+  height: 50px;
+  line-height: 50px;
+}
+
+*[id="give-purchase-button"] {
+  background-color: $azul;
+  width: 48%;
+  height: 50px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,106 @@
+footer.content-info {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    //margin-top: $espacio;
+    padding: $espacio 0;
+  }
+
+  .block {
+    font-family: "Archivo Black", Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+
+    @include make-col-ready;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+
+      padding-top: 0;
+    }
+  }
+}
+
+.fondo-br {
+  background-color: $marron;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+}
+
+.fondo-blue {
+  background-color: $azul;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+}
+
+#menu-menu-footer {
+  list-style: none;
+  text-transform: uppercase;
+  padding-inline-start: 0 !important;
+}
+
+.mr-footer {
+  background-color: $marron;
+  padding: 25px 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $espacio*3;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.year {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.legal a {
+  color: $azul;
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}
+
+.year,
+.legal {
+  color: white;
+}
+
+.social-footer {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+}
+
+.inner {
+  text-align: center;
+  align-self: center;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 59px;
+  }
+}

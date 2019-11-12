@@ -1,0 +1,531 @@
+//HOME
+.azul {
+  background-color: $azul;
+}
+
+body.home {
+  section:not(.hero):not(.widget) {
+    padding-top: $espacio;
+    padding-bottom: $espacio/2;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: $espacio*2;
+      padding-bottom: $espacio*2;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .col {
+        &:first-child {
+          font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+          p {
+            @include font-size($f2);
+
+            margin-bottom: 0;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.half-pad {
+  padding-top: $espacio/2 !important;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio !important;
+  }
+}
+
+.custom-pad-bottom {
+  padding-bottom: $espacio;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $espacio*2;
+  }
+}
+
+.col-home-offset {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(7);
+    @include make-col-offset(5);
+  }
+}
+
+.mt-minus {
+  @include media-breakpoint-up(lg) {
+    margin-top: -($espacio*4);
+  }
+}
+
+.cc {
+  position: absolute;
+
+  @include media-breakpoint-up(lg) {
+    bottom: $espacio*4;
+  }
+}
+
+.icons-home {
+  max-width: 100%;
+
+  .ico {
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+      width: 68px;
+      height: 68px;
+      display: block;
+    }
+  }
+
+  span {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    margin-top: 32px;
+    font-size: 13px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 15px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: $f4;
+    }
+  }
+
+  div {
+    width: 30%;
+    margin-bottom: $espacio;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $espacio*3;
+    margin-bottom: $espacio*3;
+
+    div {
+      width: 25%;
+    }
+  }
+}
+
+//about
+.resumen {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+
+  p {
+    font-size: 1rem;
+  }
+}
+//end about
+
+.fetch-tweets {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  a {
+    color: $marron;
+  }
+}
+
+.fetch-tweets-main > .fetch-tweets-body {
+  text-align: center;
+  margin-bottom: $espacio;
+
+  p {
+    @include font-size($f2);
+
+    line-height: 1.2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    margin-bottom: $espacio*4;
+  }
+}
+
+.fetch-tweets-heading {
+  float: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: inherit;
+  text-transform: uppercase;
+
+  .fetch-tweets-tweet-created-at {
+    float: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: inherit;
+    text-transform: uppercase;
+    margin-bottom: $espacio/2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $espacio*4;
+  }
+}
+
+.fetch-tweets-text {
+  a {
+    color: $azul;
+  }
+}
+
+.link-user-tw {
+  left: 0;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  a {
+    color: $black;
+  }
+}
+
+.ico-tw {
+  width: 39px;
+  height: 32px;
+
+  .fil0 {
+    fill: $azul;
+  }
+}
+
+//ABOUT
+.name {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+section.about {
+  padding-top: $espacio/2;
+  padding-bottom: $espacio;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio*2;
+    padding-bottom: $espacio*2;
+  }
+
+  .col1 {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+    @include make-col-ready();
+
+    @extend .d-lg-flex ;
+    @extend .flex-lg-column ;
+    @extend .align-items-lg-start ;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(5);
+    }
+  }
+
+  .col2 {
+    @include make-col-ready();
+
+    padding-top: 30px;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(7);
+
+      padding-top: 0;
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+section.brown {
+  padding-top: $espacio/2;
+  padding-bottom: $espacio;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio*2;
+    padding-bottom: $espacio*2;
+  }
+}
+
+.slide-support {
+  @include media-breakpoint-up(lg) {
+    margin-top: $espacio;
+  }
+}
+
+.item-slide-support {
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+
+  figure {
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.box {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(10);
+  }
+
+  h3 {
+    margin-top: $espacio/2;
+    font-size: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: $espacio;
+      font-size: $f2;
+    }
+  }
+}
+
+.text-slide {
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio*2;
+    padding-bottom: $espacio;
+  }
+}
+
+.next {
+  right: 11px !important;
+
+  @include media-breakpoint-up(lg) {
+    right: 35px !important;
+  }
+}
+
+.slick-next::before {
+  content: "" !important;
+}
+
+.slick-prev::before {
+  content: "" !important;
+}
+
+.ico-mas,
+.ico-menos {
+  width: 30px;
+  height: 30px;
+
+  .st0 {
+    fill: $azul;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.collaborator {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  @include make-col-ready;
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(3);
+
+    margin-bottom: $espacio;
+  }
+
+  img {
+    filter: grayscale(100%);
+  }
+}
+
+.partners {
+  @include make-col-ready;
+
+  margin-bottom: $espacio;
+  color: $mute;
+
+  figure {
+    padding-top: 15px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(6);
+
+    figure {
+      width: 50%;
+      padding-right: 20%;
+      padding-left: 5%;
+      padding-top: 0;
+      float: left;
+    }
+
+    .txt {
+      width: 50%;
+      float: right;
+    }
+  }
+
+  img {
+    filter: grayscale(100%);
+  }
+}
+
+.item-slide-team {
+  background-color: white;
+  margin: 0 0 30px 0;
+  position: relative;
+
+  img {
+    filter: grayscale(100%);
+
+    &:hover,
+    &:focus {
+      filter: grayscale(0);
+    }
+  }
+
+  button {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 15px 30px 15px;
+    position: relative;
+
+    button {
+      position: absolute;
+      width: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -18px;
+    }
+  }
+}
+
+section.team {
+  background-color: $gris;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio*2;
+    padding-bottom: $espacio*2;
+  }
+
+  .ico-mas,
+  .ico-menos {
+    .st0 {
+      fill: $azul !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 55px;
+      height: 55px;
+    }
+  }
+}
+
+.next-team {
+  right: 11px !important;
+  top: 30% !important;
+
+  @include media-breakpoint-up(lg) {
+    right: 38px !important;
+    top: 40% !important;
+  }
+}
+
+.prev-team {
+  left: 0 !important;
+  top: 30% !important;
+
+  @include media-breakpoint-up(lg) {
+    left: -1px !important;
+    top: 40% !important;
+  }
+}
+
+//CONTRIBUTORS
+section.contributors {
+  padding-top: $espacio/2;
+  padding-bottom: $espacio;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $espacio*2;
+    padding-bottom: $espacio*2;
+  }
+}
+
+//give confirmation
+body.page-template-default {
+  h1 {
+    @include media-breakpoint-up(lg) {
+      font-size: $f3;
+      color: $negro;
+    }
+  }
+
+  .page-header {
+    margin-top: $espacio*2;
+    margin-bottom: $espacio;
+    text-transform: uppercase;
+  }
+}
+
+.give_error,
+.give_success,
+.give_warning {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: transparent;
+  border-color: transparent;
+  border: none;
+
+  &::before {
+    background-color: transparent;
+    content: none;
+  }
+}
+
+// #give-receipt {
+//   @include make-col-ready;
+// }
+
+table.give-table {
+  margin: $espacio*2 0;
+}
+
+.give-receipt-thead-text,
+table#give_donation_receipt .give-receipt-thead-text {
+  text-align: left;
+  font-size: $f4;
+}
+
+table.give-table th {
+  padding: 30px 18px;
+}
+

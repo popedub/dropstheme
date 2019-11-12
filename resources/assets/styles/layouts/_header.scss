@@ -1,0 +1,343 @@
+.hero {
+  height: 55vh;
+
+  @include media-breakpoint-up(lg) {
+    height: 700px;
+    height: 85vh;
+  }
+}
+
+.back-img {
+  min-height: 100%;
+  z-index: 2;
+}
+
+.banner {
+  z-index: 4;
+  background-color: $marron;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    background-color: transparent;
+  }
+}
+
+.banner .nav li {
+  @extend .nav-item ;
+
+  text-transform: uppercase;
+}
+
+// .banner .nav a {
+//   @extend .nav-link ;
+
+//   font-family: "Archivo Black", Arial, Helvetica, sans-serif;
+// }
+
+.bck-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba($color: #000, $alpha: 0.15);
+  z-index: 3;
+}
+
+.title-header {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 4;
+  word-break: break-word;
+
+  @include media-breakpoint-up(lg) {
+    bottom: 100px; //ver
+
+    h1 {
+      margin-bottom: $espacio;
+      margin-top: 15px;
+    }
+  }
+}
+
+.ico-logo {
+  width: 108px;
+  height: 46px;
+  margin-top: 20px;
+  margin-left: 18px;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    width: 154px;
+    height: 66px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.ico-heart {
+  width: 18px;
+  height: 16px;
+}
+
+.menu-menu-1-container {
+  @include media-breakpoint-up(lg) {
+    margin-top: 13px; //tiene 40 de altura y con esto lo centramos con el logo que tiene 66px
+  }
+}
+
+.sub {
+  text-transform: uppercase;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f4;
+  }
+}
+
+ul.sub-menu {
+  opacity: 1;
+  list-style: none;
+  padding-inline-start: 0;
+
+  @include media-breakpoint-up(lg) {
+    opacity: 0;
+  }
+}
+
+li.wpml-ls-item:hover,
+li.wpml-ls-item:focus {
+  ul.sub-menu {
+    opacity: 1;
+  }
+}
+
+.banner .nav > li {
+  @include media-breakpoint-up (lg) {
+    &:nth-last-child(1) {
+      margin-top: 0;
+      margin-right: 0;
+
+      a {
+        padding-right: 1rem;
+      }
+    }
+
+    &:nth-last-child(2) {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+.banner .nav a {
+  @extend .nav-link ;
+
+  padding: 0.5rem 0 0 0;
+  margin-left: 2rem;
+  font-family: "Archivo Black", Arial, Helvetica, sans-serif;
+
+  // @include media-breakpoint-up(lg) {
+  //   float: right;
+  //   padding: 0.5rem 3.7rem;
+
+  //   &:nth-child(1n) {
+  //     padding-left: 15px;
+  //   }
+  // }
+
+  // @include media-breakpoint-up(lg) {
+  //   padding: 0.5rem 5.7rem;
+  // }
+}
+/* stylelint-disable */
+.wpml-ls-first-item {
+  a {
+    padding-right: 0 !important;
+  }
+}
+
+// .wpml-ls-last-item {
+//   a {
+//     @include media-breakpoint-up(lg) {
+//       padding-left: 1rem !important;
+
+//       &::before {
+//         content: "–";
+//         padding-right: 1rem;
+//       }
+//     }
+//   }
+// }
+
+// #menu-item-wpml-ls-7-es,
+// #menu-item-wpml-ls-7-en {
+//   @include media-breakpoint-down(lg) {//estaba en lg
+//     width: auto;
+//     float: left;
+//   }
+// }
+
+.nav {
+  transition: all 0.3s ease-in-out 0.3s;
+  margin-top: 50px;
+  //font-size: 1.6em;
+
+  @include media-breakpoint-up (lg) {
+    margin-top: 0;
+  }
+}
+
+// #menu-item-132 a,
+// #menu-item-469 a {
+//   cursor: pointer;
+
+//   @include media-breakpoint-up (lg) {
+//     padding-left: 1.5rem;
+//   }
+// }
+
+.show {
+  visibility: visible !important;
+  transition: all 0.3s ease-in-out 0.3s;
+}
+
+.current-menu-item {
+  a {
+    border-bottom: 2px solid $azul;
+  }
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+.oculto {
+  opacity: 0;
+}
+
+.nav-primary {
+  // @include make-col(8);
+
+  @include media-breakpoint-down(md) {
+    display: none;
+	  height: 0;
+    opacity: 0;
+	  text-align: left;
+	  transition: all 0.1s ease;
+    // width: 100%;
+    @include make-col(12);
+
+    padding-top: 100px;
+		// border-top: 1px solid;
+    visibility: hidden;
+
+    .wpml-ls-first-item {
+      margin-top: 100px;
+
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      color: $marron;
+    }
+  }
+
+  .nav{
+    display: none;
+    visibility: hidden;
+
+		@include media-breakpoint-up(lg) {
+      display: flex;
+      visibility: visible;
+      margin-right: 125px;
+		}
+  }
+}
+
+#menu-toggle {
+	display: none;
+  transition: all .3s ease-in-out;
+
+	 &:checked ~ .nav-primary {
+      opacity: 1;
+      height: 100vh;
+      visibility: visible;
+      display: block;
+      transition: all .3s ease-in-out;
+      background-color: $azul;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }
+
+  &:checked ~ .nav-primary .nav {
+    display: block;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+  }
+
+  &:checked ~ .label-toggle {
+    position: fixed;
+    right: 0;
+  }
+
+	&:checked ~ .label-toggle span {
+  		opacity: 1;
+  		transform: rotate(-45deg) translate(5px, 0px);
+  		background: white;
+  		&:nth-last-child(2){
+  			opacity: 0;
+  			transform: rotate(0deg) scale(0.2, 0.2);
+  		}
+  		&:nth-last-child(3){
+  			transform: rotate(45deg) translate(0, -8px);
+  		}
+	}
+
+}
+
+.label-toggle {
+  float: right;
+  height: 36px;
+  width: 36px;
+  margin-top: 32px;
+  margin-right: 18px;
+  z-index: 1076;
+
+  @include media-breakpoint-up (lg) {//estaba en lg
+    margin-top: 15px;
+  }
+
+  span{
+		display: block;
+		width: 28px;
+		height: 2px;
+		margin-bottom: 6px;
+		position: relative;
+    background: $azul;
+		z-index: 1;
+    transform-origin: 2px 0px;
+    transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+		              background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.2s ease;
+
+		&:first-child{
+			transform-origin: 0% 0%;
+		}
+		&:nth-last-child(2){
+  			transform-origin: 0% 100%;
+		}
+	}
+
+  @include media-breakpoint-up(lg){
+		display: none;
+	}
+}
+

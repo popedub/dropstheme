@@ -1,0 +1,47 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #88beff
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$slick-loader-path: "~slick-carousel/slick/";
+$slick-font-path: "#{$slick-loader-path}fonts/";
+
+$enable-responsive-font-sizes: true;
+
+$link-color: white;
+
+$espacio: 50px;
+
+$azul: #88beff;
+$marron: #322d23;
+$negro: #322d23;
+$gris: #f3f3f3;
+$mute: #7a7a7a;
+
+$f1: 4.875rem; //78px
+$f2: 2.625rem; //42px
+$f3: 2rem; //32px
+$f4: 1.5rem; //24px
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Super extra large screen
+  xxl: 1439px,
+  //para la navegacion de la galeria
+  superlarge: 2200px,
+);

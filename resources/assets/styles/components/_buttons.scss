@@ -1,0 +1,85 @@
+.btn {
+  border-radius: 2.25rem;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.btn-outline-primary {
+  color: $negro;
+  border-color: $negro;
+}
+
+.btn-fdo-white {
+  @extend .btn-primary ;
+
+  color: $negro;
+  border-color: $negro;
+  background-color: white;
+}
+
+.btn-white {
+  @extend .btn-primary ;
+
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-white {
+  @extend .btn-outline-primary ;
+
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-negro {
+  @extend .btn-outline-primary ;
+
+  color: $negro;
+  border-color: $negro;
+}
+
+.btn-outline-azul {
+  @extend .btn-outline-primary ;
+
+  color: $azul;
+  border-color: $azul;
+}
+
+.btn-suport {
+  @extend .btn-primary ;
+
+  font-weight: 400;
+  height: 38px;
+  margin-top: 22px;
+  margin-right: 30px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 13px;
+    position: fixed;
+    right: 1.5rem;
+    margin-right: 0;
+  }
+}
+
+.iconos {
+  display: none;
+  position: relative;
+}
+
+.share {
+  border: none;
+  background-color: transparent;
+  width: 100px;
+}
+
+.ico-share {
+  width: 17px;
+  height: 23px;
+}
+
+.ico-fb,
+.ico-twi {
+  width: 22px;
+  height: 23px;
+  margin-left: 20px;
+}
